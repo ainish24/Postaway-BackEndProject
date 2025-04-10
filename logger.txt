@@ -1,0 +1,113 @@
+{"level":"info","timestamp":"2025-04-10T14:52:33.163Z","request URL":"/api/users/signin","message":"Incoming Request"}
+{"level":"info","timestamp":"2025-04-10T14:52:49.660Z","request URL":"/api/users/logout","message":"Incoming Request"}
+{"level":"error","timestamp":"2025-04-10T14:52:49.663Z","request URL":"/api/users/logout","message":"Oops! Somethimg went wrong...Try again later"}
+{"level":"info","timestamp":"2025-04-10T14:53:41.468Z","request URL":"/api/users/logout","message":"Incoming Request"}
+{"level":"error","timestamp":"2025-04-10T14:53:41.481Z","request URL":"/api/users/logout","message":"Oops! Somethimg went wrong...Try again later"}
+{"level":"info","timestamp":"2025-04-10T14:57:12.451Z","request URL":"/api/users/signin","message":"Incoming Request"}
+{"level":"info","timestamp":"2025-04-10T14:57:15.296Z","request URL":"/api/users/logout","message":"Incoming Request"}
+{"level":"error","timestamp":"2025-04-10T14:57:15.299Z","request URL":"/api/users/logout","message":"You must be logged in to access this resource. Please log in and try again."}
+{"level":"info","timestamp":"2025-04-10T14:57:40.127Z","request URL":"/api/users/logout","message":"Incoming Request"}
+{"level":"error","timestamp":"2025-04-10T14:57:40.137Z","request URL":"/api/users/logout","message":"You must be logged in to access this resource. Please log in and try again."}
+{"level":"info","timestamp":"2025-04-10T14:59:20.938Z","request URL":"/api/users/logout","message":"Incoming Request"}
+{"level":"error","timestamp":"2025-04-10T14:59:20.943Z","request URL":"/api/users/logout","message":"You must be logged in to access this resource. Please log in and try again."}
+{"level":"info","timestamp":"2025-04-10T15:01:26.210Z","request URL":"/api/users/logout","message":"Incoming Request"}
+{"level":"info","timestamp":"2025-04-10T15:01:32.210Z","request URL":"/api/users/logout","message":"Incoming Request"}
+{"level":"error","timestamp":"2025-04-10T15:01:32.214Z","request URL":"/api/users/logout","message":"You must be logged in to access this resource. Please log in and try again."}
+{"level":"info","timestamp":"2025-04-10T16:43:08.717Z","request URL":"/api/users/signin","message":"Incoming Request"}
+{"level":"info","timestamp":"2025-04-10T16:51:36.387Z","request URL":"/api/users/signin","message":"Incoming Request"}
+{"level":"error","timestamp":"2025-04-10T16:51:36.453Z","request URL":"/api/users/signin","body":{"email":"ainish@gmail.com","password":"123"},"message":"Oops! Somethimg went wrong...Try again later"}
+{"level":"info","timestamp":"2025-04-10T16:51:58.581Z","request URL":"/api/users/signin","message":"Incoming Request"}
+{"level":"info","timestamp":"2025-04-10T16:52:22.601Z","request URL":"/api/users/logout-all-devices","message":"Incoming Request"}
+{"level":"error","timestamp":"2025-04-10T16:52:22.608Z","request URL":"/api/users/logout-all-devices","message":"Please log in and try again."}
+{"level":"info","timestamp":"2025-04-10T16:53:22.301Z","request URL":"/api/users/logout-all-devices","message":"Incoming Request"}
+{"level":"error","timestamp":"2025-04-10T16:53:22.316Z","request URL":"/api/users/logout-all-devices","message":"Please log in and try again."}
+{"level":"info","timestamp":"2025-04-10T16:54:15.058Z","request URL":"/api/users/signin","message":"Incoming Request"}
+{"level":"info","timestamp":"2025-04-10T16:54:18.080Z","request URL":"/api/users/logout-all-devices","message":"Incoming Request"}
+{"level":"error","timestamp":"2025-04-10T16:54:18.081Z","request URL":"/api/users/logout-all-devices","message":"Oops! Somethimg went wrong...Try again later"}
+{"level":"info","timestamp":"2025-04-10T16:55:05.447Z","request URL":"/api/users/logout-all-devices","message":"Incoming Request"}
+{"level":"error","timestamp":"2025-04-10T16:55:05.451Z","request URL":"/api/users/logout-all-devices","message":"Oops! Somethimg went wrong...Try again later"}
+{"level":"info","timestamp":"2025-04-10T16:55:26.205Z","request URL":"/api/users/logout-all-devices","message":"Incoming Request"}
+{"level":"error","timestamp":"2025-04-10T16:55:26.208Z","request URL":"/api/users/logout-all-devices","message":"Oops! Somethimg went wrong...Try again later"}
+{"level":"info","timestamp":"2025-04-10T16:55:53.807Z","request URL":"/api/users/logout-all-devices","message":"Incoming Request"}
+{"level":"error","timestamp":"2025-04-10T16:55:53.810Z","request URL":"/api/users/logout-all-devices","message":"Oops! Somethimg went wrong...Try again later"}
+{"level":"info","timestamp":"2025-04-10T16:58:05.086Z","request URL":"/api/users/logout-all-devices","message":"Incoming Request"}
+{"level":"error","timestamp":"2025-04-10T16:58:05.089Z","request URL":"/api/users/logout-all-devices","message":"Oops! Somethimg went wrong...Try again later"}
+{"level":"info","timestamp":"2025-04-10T16:58:19.891Z","request URL":"/api/users/logout-all-devices","message":"Incoming Request"}
+{"level":"error","timestamp":"2025-04-10T16:58:19.894Z","request URL":"/api/users/logout-all-devices","message":"Oops! Somethimg went wrong...Try again later"}
+{"level":"info","timestamp":"2025-04-10T16:59:11.253Z","request URL":"/api/users/signin","message":"Incoming Request"}
+{"level":"info","timestamp":"2025-04-10T16:59:16.398Z","request URL":"/api/users/logout-all-devices","message":"Incoming Request"}
+{"level":"error","timestamp":"2025-04-10T16:59:16.399Z","request URL":"/api/users/logout-all-devices","message":"Oops! Somethimg went wrong...Try again later"}
+{"level":"info","timestamp":"2025-04-10T16:59:26.405Z","request URL":"/api/users/logout-all-devices","message":"Incoming Request"}
+{"level":"info","timestamp":"2025-04-10T17:01:21.500Z","request URL":"/api/users/logout-all-devices","message":"Incoming Request"}
+{"level":"info","timestamp":"2025-04-10T17:01:25.634Z","request URL":"/api/users/signin","message":"Incoming Request"}
+{"level":"info","timestamp":"2025-04-10T17:01:31.614Z","request URL":"/api/users/logout-all-devices","message":"Incoming Request"}
+{"level":"info","timestamp":"2025-04-10T18:43:45.630Z","request URL":"/api/users/signin","message":"Incoming Request"}
+{"level":"info","timestamp":"2025-04-10T18:43:53.268Z","request URL":"/api/users/logout","message":"Incoming Request"}
+{"level":"error","timestamp":"2025-04-10T18:43:53.274Z","request URL":"/api/users/logout","message":"Please log in and try again."}
+{"level":"info","timestamp":"2025-04-10T18:44:16.797Z","request URL":"/api/users/signin","message":"Incoming Request"}
+{"level":"info","timestamp":"2025-04-10T18:44:18.789Z","request URL":"/api/users/logout","message":"Incoming Request"}
+{"level":"info","timestamp":"2025-04-10T18:44:23.763Z","request URL":"/api/users/signin","message":"Incoming Request"}
+{"level":"info","timestamp":"2025-04-10T18:45:12.020Z","request URL":"/api/users/signin","message":"Incoming Request"}
+{"level":"info","timestamp":"2025-04-10T18:45:15.022Z","request URL":"/api/users/logout-all-devices","message":"Incoming Request"}
+{"level":"error","timestamp":"2025-04-10T18:45:15.024Z","request URL":"/api/users/logout-all-devices","message":"Oops! Somethimg went wrong...Try again later"}
+{"level":"info","timestamp":"2025-04-10T18:45:34.419Z","request URL":"/api/users/signin","message":"Incoming Request"}
+{"level":"info","timestamp":"2025-04-10T18:45:37.133Z","request URL":"/api/users/logout-all-devices","message":"Incoming Request"}
+{"level":"error","timestamp":"2025-04-10T18:45:37.134Z","request URL":"/api/users/logout-all-devices","message":"Oops! Somethimg went wrong...Try again later"}
+{"level":"info","timestamp":"2025-04-10T18:45:47.985Z","request URL":"/api/users/signin","message":"Incoming Request"}
+{"level":"info","timestamp":"2025-04-10T18:45:49.266Z","request URL":"/api/users/signin","message":"Incoming Request"}
+{"level":"info","timestamp":"2025-04-10T18:45:51.142Z","request URL":"/api/users/logout-all-devices","message":"Incoming Request"}
+{"level":"error","timestamp":"2025-04-10T18:45:51.144Z","request URL":"/api/users/logout-all-devices","message":"Oops! Somethimg went wrong...Try again later"}
+{"level":"info","timestamp":"2025-04-10T18:46:18.648Z","request URL":"/api/users/signin","message":"Incoming Request"}
+{"level":"info","timestamp":"2025-04-10T18:47:45.732Z","request URL":"/api/users/signin","message":"Incoming Request"}
+{"level":"info","timestamp":"2025-04-10T18:47:49.059Z","request URL":"/api/users/logout-all-devices","message":"Incoming Request"}
+{"level":"error","timestamp":"2025-04-10T18:47:49.060Z","request URL":"/api/users/logout-all-devices","message":"Oops! Somethimg went wrong...Try again later"}
+{"level":"info","timestamp":"2025-04-10T18:49:12.332Z","request URL":"/api/users/signin","message":"Incoming Request"}
+{"level":"info","timestamp":"2025-04-10T18:51:38.431Z","request URL":"/api/users/signin","message":"Incoming Request"}
+{"level":"info","timestamp":"2025-04-10T18:51:41.338Z","request URL":"/api/users/logout-all-devices","message":"Incoming Request"}
+{"level":"error","timestamp":"2025-04-10T18:51:41.339Z","request URL":"/api/users/logout-all-devices","message":"Oops! Somethimg went wrong...Try again later"}
+{"level":"info","timestamp":"2025-04-10T18:52:23.716Z","request URL":"/api/users/logout-all-devices","message":"Incoming Request"}
+{"level":"error","timestamp":"2025-04-10T18:52:23.720Z","request URL":"/api/users/logout-all-devices","message":"Oops! Somethimg went wrong...Try again later"}
+{"level":"info","timestamp":"2025-04-10T18:54:42.912Z","request URL":"/api/users/signin","message":"Incoming Request"}
+{"level":"info","timestamp":"2025-04-10T18:54:45.391Z","request URL":"/api/users/logout","message":"Incoming Request"}
+{"level":"info","timestamp":"2025-04-10T18:55:23.051Z","request URL":"/api/users/logout-all-devices","message":"Incoming Request"}
+{"level":"error","timestamp":"2025-04-10T18:55:23.054Z","request URL":"/api/users/logout-all-devices","message":"Please log in and try again."}
+{"level":"info","timestamp":"2025-04-10T18:55:56.837Z","request URL":"/api/users/logout-all-devices","message":"Incoming Request"}
+{"level":"error","timestamp":"2025-04-10T18:55:56.840Z","request URL":"/api/users/logout-all-devices","message":"Please log in and try again."}
+{"level":"info","timestamp":"2025-04-10T18:56:03.667Z","request URL":"/api/users/signin","message":"Incoming Request"}
+{"level":"info","timestamp":"2025-04-10T18:56:06.872Z","request URL":"/api/users/logout-all-devices","message":"Incoming Request"}
+{"level":"info","timestamp":"2025-04-10T18:58:53.856Z","request URL":"/api/users/signin","message":"Incoming Request"}
+{"level":"info","timestamp":"2025-04-10T18:59:00.696Z","request URL":"/api/users/logout-all-devices","message":"Incoming Request"}
+{"level":"info","timestamp":"2025-04-10T18:59:10.900Z","request URL":"/api/users/signin","message":"Incoming Request"}
+{"level":"info","timestamp":"2025-04-10T19:01:06.264Z","request URL":"/api/users/signin","message":"Incoming Request"}
+{"level":"info","timestamp":"2025-04-10T19:05:45.337Z","request URL":"/api/users/signin","message":"Incoming Request"}
+{"level":"info","timestamp":"2025-04-10T19:06:27.568Z","request URL":"/api/users/signin","message":"Incoming Request"}
+{"level":"info","timestamp":"2025-04-10T19:07:04.856Z","request URL":"/api/users/signin","message":"Incoming Request"}
+{"level":"info","timestamp":"2025-04-10T19:07:42.152Z","request URL":"/","message":"Incoming Request"}
+{"level":"info","timestamp":"2025-04-10T19:07:57.935Z","request URL":"/","message":"Incoming Request"}
+{"level":"info","timestamp":"2025-04-10T19:08:11.050Z","request URL":"/","message":"Incoming Request"}
+{"level":"info","timestamp":"2025-04-10T19:08:19.144Z","request URL":"/","message":"Incoming Request"}
+{"level":"error","timestamp":"2025-04-10T19:08:19.146Z","request URL":"/","message":"Please log in and try again."}
+{"level":"info","timestamp":"2025-04-10T19:08:33.915Z","request URL":"/","message":"Incoming Request"}
+{"level":"info","timestamp":"2025-04-10T19:08:42.378Z","request URL":"/api/users/logout-all-devices","message":"Incoming Request"}
+{"level":"info","timestamp":"2025-04-10T19:08:45.200Z","request URL":"/","message":"Incoming Request"}
+{"level":"error","timestamp":"2025-04-10T19:08:45.200Z","request URL":"/","message":"Please log in and try again."}
+{"level":"info","timestamp":"2025-04-10T19:09:12.941Z","request URL":"/","message":"Incoming Request"}
+{"level":"error","timestamp":"2025-04-10T19:09:12.944Z","request URL":"/","message":"Please log in and try again."}
+{"level":"info","timestamp":"2025-04-10T19:09:29.750Z","request URL":"/","message":"Incoming Request"}
+{"level":"error","timestamp":"2025-04-10T19:09:29.752Z","request URL":"/","message":"Please log in and try again."}
+{"level":"info","timestamp":"2025-04-10T19:09:47.740Z","request URL":"/api/users/signin","message":"Incoming Request"}
+{"level":"info","timestamp":"2025-04-10T19:10:00.992Z","request URL":"/api/users/signin","message":"Incoming Request"}
+{"level":"info","timestamp":"2025-04-10T19:10:15.296Z","request URL":"/api/users/signin","message":"Incoming Request"}
+{"level":"info","timestamp":"2025-04-10T19:10:30.945Z","request URL":"/","message":"Incoming Request"}
+{"level":"info","timestamp":"2025-04-10T19:10:44.274Z","request URL":"/","message":"Incoming Request"}
+{"level":"info","timestamp":"2025-04-10T19:10:54.734Z","request URL":"/","message":"Incoming Request"}
+{"level":"info","timestamp":"2025-04-10T19:11:17.200Z","request URL":"/","message":"Incoming Request"}
+{"level":"info","timestamp":"2025-04-10T19:11:23.179Z","request URL":"/api/users/logout","message":"Incoming Request"}
+{"level":"info","timestamp":"2025-04-10T19:11:40.484Z","request URL":"/","message":"Incoming Request"}
+{"level":"info","timestamp":"2025-04-10T19:12:00.408Z","request URL":"/api/users/logout","message":"Incoming Request"}
+{"level":"info","timestamp":"2025-04-10T19:12:02.575Z","request URL":"/","message":"Incoming Request"}
+{"level":"error","timestamp":"2025-04-10T19:12:02.575Z","request URL":"/","message":"Please log in and try again."}
+{"level":"info","timestamp":"2025-04-10T19:12:16.880Z","request URL":"/","message":"Incoming Request"}
+{"level":"info","timestamp":"2025-04-10T19:12:22.430Z","request URL":"/api/users/logout-all-devices","message":"Incoming Request"}
+{"level":"info","timestamp":"2025-04-10T19:12:37.410Z","request URL":"/api/users/logout-all-devices","message":"Incoming Request"}
+{"level":"error","timestamp":"2025-04-10T19:12:37.412Z","request URL":"/api/users/logout-all-devices","message":"Please log in and try again."}
