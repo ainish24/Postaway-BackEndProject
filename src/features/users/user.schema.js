@@ -1,4 +1,5 @@
 import mongoose from "mongoose";
+import { errorHandler } from "../../middlewares/errorHandler.js";
 
 export const userSchema=new mongoose.Schema({
     name:{
@@ -13,6 +14,9 @@ export const userSchema=new mongoose.Schema({
         type:String,
         required:true
     },
+    avatar:{
+        type:String
+    },
     gender:{
         type:String,
         required:true,
@@ -25,10 +29,9 @@ export const userSchema=new mongoose.Schema({
 })
 
 const tokenBlacklistSchema= new mongoose.Schema({
-    jit:{
+    jti:{
         type:String,
-        required:true,
-        unique:true
+        required:true
     },
     expiresAt:{
         type:Date,
@@ -37,6 +40,13 @@ const tokenBlacklistSchema= new mongoose.Schema({
 })
 
 tokenBlacklistSchema.index({ expiresAt: 1 }, { expireAfterSeconds: 0 });
+tokenBlacklistSchema.pre('save', async function(next){
+    const existingToken= await mongoose.models.BlacklistedToken.findOne({jti:this.jti})
+    if(existingToken){
+        throw new errorHandler(409, "Duplicate token")
+    }
+    next()
+})
 
 export const userModel= mongoose.model('User',userSchema)
 export const tokenBlacklistModel=mongoose.model('BlacklistedToken',tokenBlacklistSchema)

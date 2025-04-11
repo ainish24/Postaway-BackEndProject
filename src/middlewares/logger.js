@@ -1,7 +1,7 @@
 import winston from "winston";
 
 const formatTimestamp=()=>{
-    const date = new Date().toISOString()
+    const date = new Date().toString()
     return date
 }
 

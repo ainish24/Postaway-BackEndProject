@@ -6,6 +6,7 @@ import { errorHandlerMiddleware } from './src/middlewares/errorHandler.js'
 import { loggerMiddleware } from './src/middlewares/logger.js'
 import { verifyToken } from './src/middlewares/jwtAuth.js'
 import userRoutes from './src/features/users/user.routes.js'
+import postRoutes from './src/features/posts/post.routes.js'
 
 const app = express()
 dotenv.config()
@@ -14,8 +15,10 @@ app.use(express.urlencoded({extended:true}))
 app.use(express.json())
 app.use(cookieParser())
 app.use(loggerMiddleware)
+app.use(express.static('public'))
 
 app.use('/api/users',userRoutes)
+app.use('/api/posts',postRoutes)
 
 app.get('/',verifyToken,(req,res)=>{
     res.send("Server is up!")

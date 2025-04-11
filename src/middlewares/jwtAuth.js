@@ -1,5 +1,5 @@
 import { errorHandler } from "./errorHandler.js";
-import { userModel } from "../features/users/user.schema.js";
+import { userModel, tokenBlacklistModel } from "../features/users/user.schema.js";
 import jwt from 'jsonwebtoken'
 
 export const verifyToken = async (req, res, next) => {
@@ -7,6 +7,10 @@ export const verifyToken = async (req, res, next) => {
     try {
         const user = jwt.verify(token, process.env.JWT_KEY)
         req.user = user
+        const blackListed= await tokenBlacklistModel.findOne({jti:req.user.jti})
+        if(blackListed){
+            throw new errorHandler(401,"Token expired, login again")
+        }
         const dbUser = await userModel.findById(user._id)
         const dbUserTime=dbUser.logoutAll
         const currentLoginTime=new Date(user.iat * 1000)
@@ -15,7 +19,6 @@ export const verifyToken = async (req, res, next) => {
         }
         next()
     } catch (error) {
-        console.log(error.message)
-        throw new errorHandler(401, "Please log in and try again.")
+        throw new errorHandler(401, "Login Again")
     }
 }
