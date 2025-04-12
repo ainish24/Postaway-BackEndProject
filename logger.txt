@@ -40,3 +40,6 @@
 {"level":"error","timestamp":"Sat Apr 12 2025 13:16:58 GMT+0530 (India Standard Time)","request URL":"/api/comments/67fa150e81fc35b318265cbf","body":{"comment":"Jai jisu"},"message":"You are not authorized to perform this action"}
 {"level":"info","timestamp":"Sat Apr 12 2025 13:17:06 GMT+0530 (India Standard Time)","request URL":"/api/users/signin","message":"Incoming Request"}
 {"level":"info","timestamp":"Sat Apr 12 2025 13:17:08 GMT+0530 (India Standard Time)","request URL":"/api/comments/67fa150e81fc35b318265cbf","body":{"comment":"Jai jisu"},"message":"Incoming Request"}
+{"level":"info","timestamp":"Sat Apr 12 2025 17:13:19 GMT+0530 (India Standard Time)","request URL":"/api/likes/toggle/67fa150e81fc35b318265cbf?likeFor=Comment","message":"Incoming Request"}
+{"level":"info","timestamp":"Sat Apr 12 2025 17:15:06 GMT+0530 (India Standard Time)","request URL":"/api/likes/toggle/67fa150e81fc35b318265cbf?likeFor=Comment","message":"Incoming Request"}
+{"level":"error","timestamp":"Sat Apr 12 2025 17:15:06 GMT+0530 (India Standard Time)","request URL":"/api/likes/toggle/67fa150e81fc35b318265cbf?likeFor=Comment","message":"Oops! Somethimg went wrong...Try again later"}
