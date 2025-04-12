@@ -8,7 +8,7 @@ const signUp = async (data) => {
         const newUser = await userModel.create({ ...data, password: encPass })
         return newUser
     } catch (error) {
-        throw new errorHandler(400, "Error creating new User")
+        throw new errorHandler(400, `Error creating new User. ${error.message}`)
     }
 }
 const signIn = async (data) => {
@@ -23,7 +23,7 @@ const signIn = async (data) => {
         }
         return user
     } catch (error) {
-        throw new errorHandler(400, "Error logging in")
+        throw new errorHandler(400, `Error logging in. ${error.message}`)
     }
 }
 
@@ -32,7 +32,7 @@ const logoutAll = async (userId) => {
     try {
         await userModel.findByIdAndUpdate(userId, { logoutAll: logoutTime })
     } catch (error) {
-        throw new errorHandler(500, "Unknown error while logging out")
+        throw new errorHandler(500, `Unknown error while logging out. ${error.message}`)
     }
 }
 
@@ -41,7 +41,7 @@ const getById = async (userId) => {
         const user = await userModel.findById(userId).select('-password -logoutAll -__v -_id')
         return user
     }catch(error){
-        throw new errorHandler(404,'User with given Id not found!')
+        throw new errorHandler(404,`User with given Id not found! ${error.message}`)
     }
 }
 
@@ -50,7 +50,7 @@ const getAll=async()=>{
         const users = await userModel.find().select('-password -logoutAll -__v -_id')
         return users
     } catch (error) {
-        throw new errorHandler(500,'Error retrieving user details!')
+        throw new errorHandler(500,`Error retrieving user details! ${error.message}`)
     }
 }
 
@@ -59,7 +59,7 @@ const updateById=async(userId,data)=>{
         const user = await userModel.findByIdAndUpdate(userId,{...data})
         return user
     } catch (error) {
-        throw new errorHandler(500,'Error updating user details!')
+        throw new errorHandler(500,`Error updating user details! ${error.message}`)
     }
 }
 

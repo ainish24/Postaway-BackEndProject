@@ -6,7 +6,7 @@ const getComments=async(postId)=>{
         const comments=await commentModel.find({postId:{$eq:postId}})
         return comments
     } catch (error) {
-        throw new errorHandler (400,"No comments found")
+        throw new errorHandler (400,`No comments found. ${error.message}`)
     }
 }
 const addComment=async(postId,userId,comment)=>{
@@ -15,7 +15,7 @@ const addComment=async(postId,userId,comment)=>{
         const createdComment=await commentModel.create(newComment)
         return createdComment
     } catch (error) {
-        throw new errorHandler (400,"Error adding comment")
+        throw new errorHandler (400,`Error adding comment. ${error.message}`)
     }
 }
 const deleteComment=async(commentId)=>{
@@ -23,7 +23,7 @@ const deleteComment=async(commentId)=>{
         const deletedComment=await commentModel.findByIdAndDelete(commentId)
         return deletedComment
     } catch (error) {
-        throw new errorHandler (400,"Error deleting comment")
+        throw new errorHandler (400,`Error deleting comment. ${error.message}`)
     }
 }
 const updateComment=async(commentId,data)=>{
@@ -31,7 +31,7 @@ const updateComment=async(commentId,data)=>{
         const updatedComment=await commentModel.findByIdAndUpdate(commentId,{...data},{new:true})
         return updatedComment
     } catch (error) {
-        throw new errorHandler (400,"Error updating comment")
+        throw new errorHandler (400,`Error updating comment. ${error.message}`)
     }
 }
 

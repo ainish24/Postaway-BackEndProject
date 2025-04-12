@@ -104,3 +104,83 @@
 {"level":"info","timestamp":"Sat Apr 12 2025 20:47:46 GMT+0530 (India Standard Time)","request URL":"/api/friends/get-friends/67f8f2b5b2bac0a56bf36f7d","message":"Incoming Request"}
 {"level":"info","timestamp":"Sat Apr 12 2025 20:48:06 GMT+0530 (India Standard Time)","request URL":"/api/friends/get-friends/67f8f2b5b2bac0a56bf36f7d","message":"Incoming Request"}
 {"level":"info","timestamp":"Sat Apr 12 2025 20:48:30 GMT+0530 (India Standard Time)","request URL":"/api/friends/get-friends/67f8f2b5b2bac0a56bf36f7d","message":"Incoming Request"}
+{"level":"info","timestamp":"Sat Apr 12 2025 21:08:06 GMT+0530 (India Standard Time)","request URL":"/api/likes/:id","message":"Incoming Request"}
+{"level":"error","timestamp":"Sat Apr 12 2025 21:08:06 GMT+0530 (India Standard Time)","request URL":"/api/likes/:id","message":"Login Again"}
+{"level":"info","timestamp":"Sat Apr 12 2025 21:08:10 GMT+0530 (India Standard Time)","request URL":"/api/users/signin","message":"Incoming Request"}
+{"level":"info","timestamp":"Sat Apr 12 2025 21:08:12 GMT+0530 (India Standard Time)","request URL":"/api/likes/:id","message":"Incoming Request"}
+{"level":"error","timestamp":"Sat Apr 12 2025 21:08:12 GMT+0530 (India Standard Time)","request URL":"/api/likes/:id","message":"Error getting likes"}
+{"level":"info","timestamp":"Sat Apr 12 2025 21:08:28 GMT+0530 (India Standard Time)","request URL":"/api/likes/:id","message":"Incoming Request"}
+{"level":"error","timestamp":"Sat Apr 12 2025 21:08:28 GMT+0530 (India Standard Time)","request URL":"/api/likes/:id","message":"Error getting likes"}
+{"level":"info","timestamp":"Sat Apr 12 2025 21:09:18 GMT+0530 (India Standard Time)","request URL":"/api/likes/:id","message":"Incoming Request"}
+{"level":"error","timestamp":"Sat Apr 12 2025 21:09:18 GMT+0530 (India Standard Time)","request URL":"/api/likes/:id","message":"Error getting likes"}
+{"level":"info","timestamp":"Sat Apr 12 2025 21:11:25 GMT+0530 (India Standard Time)","request URL":"/api/likes/67fa150e81fc35b318265cbf?likeFor=Post","message":"Incoming Request"}
+{"level":"info","timestamp":"Sat Apr 12 2025 21:13:15 GMT+0530 (India Standard Time)","request URL":"/api/likes/67fa150e81fc35b318265cbf?likeFor=Post","message":"Incoming Request"}
+{"level":"info","timestamp":"Sat Apr 12 2025 21:18:13 GMT+0530 (India Standard Time)","request URL":"/api/likes/67fa150e81fc35b318265cbf?likeFor=Post","message":"Incoming Request"}
+{"level":"info","timestamp":"Sat Apr 12 2025 21:18:22 GMT+0530 (India Standard Time)","request URL":"/api/likes/67fa150e81fc35b318265cbf?likeFor=Post","message":"Incoming Request"}
+{"level":"info","timestamp":"Sat Apr 12 2025 21:18:28 GMT+0530 (India Standard Time)","request URL":"/api/likes/67fa150e81fc35b318265cbf?likeFor=Comment","message":"Incoming Request"}
+{"level":"info","timestamp":"Sat Apr 12 2025 21:20:06 GMT+0530 (India Standard Time)","request URL":"/api/likes/67fa150e81fc35b318265cbf?likeFor=Comment","message":"Incoming Request"}
+{"level":"info","timestamp":"Sat Apr 12 2025 21:20:47 GMT+0530 (India Standard Time)","request URL":"/api/likes/67fa136a44bde670ddc91597?likeFor=Post","message":"Incoming Request"}
+{"level":"info","timestamp":"Sat Apr 12 2025 21:21:15 GMT+0530 (India Standard Time)","request URL":"/api/likes/67fa136a44bde670ddc91597?likeFor=Post","message":"Incoming Request"}
+{"level":"info","timestamp":"Sat Apr 12 2025 21:21:46 GMT+0530 (India Standard Time)","request URL":"/api/likes/toggle/67fa136a44bde670ddc91597","message":"Incoming Request"}
+{"level":"error","timestamp":"Sat Apr 12 2025 21:21:46 GMT+0530 (India Standard Time)","request URL":"/api/likes/toggle/67fa136a44bde670ddc91597","message":"Error toggling like"}
+{"level":"info","timestamp":"Sat Apr 12 2025 21:22:20 GMT+0530 (India Standard Time)","request URL":"/api/likes/toggle/67fa136a44bde670ddc91597","message":"Incoming Request"}
+{"level":"error","timestamp":"Sat Apr 12 2025 21:22:20 GMT+0530 (India Standard Time)","request URL":"/api/likes/toggle/67fa136a44bde670ddc91597","message":"Error toggling like"}
+{"level":"info","timestamp":"Sat Apr 12 2025 21:23:09 GMT+0530 (India Standard Time)","request URL":"/api/likes/toggle/67fa136a44bde670ddc91597?likeFor=Comment","message":"Incoming Request"}
+{"level":"error","timestamp":"Sat Apr 12 2025 21:23:09 GMT+0530 (India Standard Time)","request URL":"/api/likes/toggle/67fa136a44bde670ddc91597?likeFor=Comment","message":"Error toggling like"}
+{"level":"info","timestamp":"Sat Apr 12 2025 21:23:22 GMT+0530 (India Standard Time)","request URL":"/api/likes/toggle/67fa136a44bde670ddc91597?likeFor=Comment","message":"Incoming Request"}
+{"level":"error","timestamp":"Sat Apr 12 2025 21:23:22 GMT+0530 (India Standard Time)","request URL":"/api/likes/toggle/67fa136a44bde670ddc91597?likeFor=Comment","message":"Login Again"}
+{"level":"info","timestamp":"Sat Apr 12 2025 21:23:30 GMT+0530 (India Standard Time)","request URL":"/api/users/signin","message":"Incoming Request"}
+{"level":"info","timestamp":"Sat Apr 12 2025 21:23:34 GMT+0530 (India Standard Time)","request URL":"/api/likes/toggle/67fa136a44bde670ddc91597?likeFor=Comment","message":"Incoming Request"}
+{"level":"error","timestamp":"Sat Apr 12 2025 21:23:34 GMT+0530 (India Standard Time)","request URL":"/api/likes/toggle/67fa136a44bde670ddc91597?likeFor=Comment","message":"Error toggling like"}
+{"level":"info","timestamp":"Sat Apr 12 2025 21:25:28 GMT+0530 (India Standard Time)","request URL":"/api/likes/toggle/67fa136a44bde670ddc91597?likeFor=Comment","message":"Incoming Request"}
+{"level":"error","timestamp":"Sat Apr 12 2025 21:25:28 GMT+0530 (India Standard Time)","request URL":"/api/likes/toggle/67fa136a44bde670ddc91597?likeFor=Comment","message":"Error toggling like. No comment with given id exists."}
+{"level":"info","timestamp":"Sat Apr 12 2025 21:25:55 GMT+0530 (India Standard Time)","request URL":"/api/likes/toggle/67fa136a44bde670ddc91597?likeFor=Post","message":"Incoming Request"}
+{"level":"info","timestamp":"Sat Apr 12 2025 21:26:04 GMT+0530 (India Standard Time)","request URL":"/api/likes/67fa136a44bde670ddc91597?likeFor=Post","message":"Incoming Request"}
+{"level":"info","timestamp":"Sat Apr 12 2025 23:22:36 GMT+0530 (India Standard Time)","request URL":"/api/users/signin","message":"Incoming Request"}
+{"level":"info","timestamp":"Sat Apr 12 2025 23:23:20 GMT+0530 (India Standard Time)","request URL":"/api/otp/send","message":"Incoming Request"}
+{"level":"info","timestamp":"Sat Apr 12 2025 23:28:08 GMT+0530 (India Standard Time)","request URL":"/api/otp/send","message":"Incoming Request"}
+{"level":"info","timestamp":"Sat Apr 12 2025 23:32:46 GMT+0530 (India Standard Time)","request URL":"/api/otp/send","message":"Incoming Request"}
+{"level":"info","timestamp":"Sat Apr 12 2025 23:38:25 GMT+0530 (India Standard Time)","request URL":"/api/otp/send","message":"Incoming Request"}
+{"level":"error","timestamp":"Sat Apr 12 2025 23:38:25 GMT+0530 (India Standard Time)","request URL":"/api/otp/send","message":"Login Again"}
+{"level":"info","timestamp":"Sat Apr 12 2025 23:38:29 GMT+0530 (India Standard Time)","request URL":"/api/users/signin","message":"Incoming Request"}
+{"level":"info","timestamp":"Sat Apr 12 2025 23:38:32 GMT+0530 (India Standard Time)","request URL":"/api/otp/send","message":"Incoming Request"}
+{"level":"info","timestamp":"Sat Apr 12 2025 23:39:02 GMT+0530 (India Standard Time)","request URL":"/api/otp/send","message":"Incoming Request"}
+{"level":"info","timestamp":"Sun Apr 13 2025 01:37:16 GMT+0530 (India Standard Time)","request URL":"/api/otp/send","message":"Incoming Request"}
+{"level":"error","timestamp":"Sun Apr 13 2025 01:37:16 GMT+0530 (India Standard Time)","request URL":"/api/otp/send","message":"Login Again"}
+{"level":"info","timestamp":"Sun Apr 13 2025 01:37:20 GMT+0530 (India Standard Time)","request URL":"/api/users/signin","message":"Incoming Request"}
+{"level":"info","timestamp":"Sun Apr 13 2025 01:37:24 GMT+0530 (India Standard Time)","request URL":"/api/otp/send","message":"Incoming Request"}
+{"level":"info","timestamp":"Sun Apr 13 2025 01:43:41 GMT+0530 (India Standard Time)","request URL":"/api/otp/send","message":"Incoming Request"}
+{"level":"info","timestamp":"Sun Apr 13 2025 01:48:05 GMT+0530 (India Standard Time)","request URL":"/api/otp/send","message":"Incoming Request"}
+{"level":"info","timestamp":"Sun Apr 13 2025 01:49:34 GMT+0530 (India Standard Time)","request URL":"/api/otp/send","message":"Incoming Request"}
+{"level":"info","timestamp":"Sun Apr 13 2025 01:53:53 GMT+0530 (India Standard Time)","request URL":"/api/otp/send","message":"Incoming Request"}
+{"level":"error","timestamp":"Sun Apr 13 2025 01:53:53 GMT+0530 (India Standard Time)","request URL":"/api/otp/send","message":"Login Again"}
+{"level":"info","timestamp":"Sun Apr 13 2025 01:53:56 GMT+0530 (India Standard Time)","request URL":"/api/users/signin","message":"Incoming Request"}
+{"level":"info","timestamp":"Sun Apr 13 2025 01:53:59 GMT+0530 (India Standard Time)","request URL":"/api/otp/send","message":"Incoming Request"}
+{"level":"info","timestamp":"Sun Apr 13 2025 01:54:09 GMT+0530 (India Standard Time)","request URL":"/api/otp/send","message":"Incoming Request"}
+{"level":"info","timestamp":"Sun Apr 13 2025 02:02:29 GMT+0530 (India Standard Time)","request URL":"/api/otp/send","message":"Incoming Request"}
+{"level":"info","timestamp":"Sun Apr 13 2025 02:03:30 GMT+0530 (India Standard Time)","request URL":"/api/otp/send","message":"Incoming Request"}
+{"level":"info","timestamp":"Sun Apr 13 2025 02:08:00 GMT+0530 (India Standard Time)","request URL":"/api/otp/send","message":"Incoming Request"}
+{"level":"info","timestamp":"Sun Apr 13 2025 02:08:25 GMT+0530 (India Standard Time)","request URL":"/api/otp/send","message":"Incoming Request"}
+{"level":"info","timestamp":"Sun Apr 13 2025 02:18:49 GMT+0530 (India Standard Time)","request URL":"/api/otp/send","message":"Incoming Request"}
+{"level":"error","timestamp":"Sun Apr 13 2025 02:18:49 GMT+0530 (India Standard Time)","request URL":"/api/otp/send","message":"Login Again"}
+{"level":"info","timestamp":"Sun Apr 13 2025 02:18:53 GMT+0530 (India Standard Time)","request URL":"/api/users/signin","message":"Incoming Request"}
+{"level":"info","timestamp":"Sun Apr 13 2025 02:18:56 GMT+0530 (India Standard Time)","request URL":"/api/otp/send","message":"Incoming Request"}
+{"level":"info","timestamp":"Sun Apr 13 2025 02:19:23 GMT+0530 (India Standard Time)","request URL":"/api/otp/verify","body":{"otp":"197710"},"message":"Incoming Request"}
+{"level":"info","timestamp":"Sun Apr 13 2025 02:19:33 GMT+0530 (India Standard Time)","request URL":"/api/otp/verify","body":{"otp":"197711"},"message":"Incoming Request"}
+{"level":"error","timestamp":"Sun Apr 13 2025 02:19:33 GMT+0530 (India Standard Time)","request URL":"/api/otp/verify","body":{"otp":"197711"},"message":"OTP verification failed. Wrong OTP."}
+{"level":"info","timestamp":"Sun Apr 13 2025 02:19:40 GMT+0530 (India Standard Time)","request URL":"/api/otp/verify","body":{"otp":"197710"},"message":"Incoming Request"}
+{"level":"info","timestamp":"Sun Apr 13 2025 02:21:12 GMT+0530 (India Standard Time)","request URL":"/api/otp/verify","body":{"otp":"197710"},"message":"Incoming Request"}
+{"level":"info","timestamp":"Sun Apr 13 2025 02:21:28 GMT+0530 (India Standard Time)","request URL":"/api/otp/verify","body":{"otp":"197710"},"message":"Incoming Request"}
+{"level":"error","timestamp":"Sun Apr 13 2025 02:21:28 GMT+0530 (India Standard Time)","request URL":"/api/otp/verify","body":{"otp":"197710"},"message":"OTP verification failed. OTP expired."}
+{"level":"info","timestamp":"Sun Apr 13 2025 02:21:39 GMT+0530 (India Standard Time)","request URL":"/api/otp/send","message":"Incoming Request"}
+{"level":"info","timestamp":"Sun Apr 13 2025 02:22:06 GMT+0530 (India Standard Time)","request URL":"/api/otp/verify","body":{"otp":"298291"},"message":"Incoming Request"}
+{"level":"info","timestamp":"Sun Apr 13 2025 02:22:19 GMT+0530 (India Standard Time)","request URL":"/api/otp/send","message":"Incoming Request"}
+{"level":"info","timestamp":"Sun Apr 13 2025 02:22:36 GMT+0530 (India Standard Time)","request URL":"/api/otp/verify","body":{"otp":"946448"},"message":"Incoming Request"}
+{"level":"error","timestamp":"Sun Apr 13 2025 02:22:36 GMT+0530 (India Standard Time)","request URL":"/api/otp/verify","body":{"otp":"946448"},"message":"OTP verification failed. Wrong OTP."}
+{"level":"info","timestamp":"Sun Apr 13 2025 02:22:43 GMT+0530 (India Standard Time)","request URL":"/api/otp/verify","body":{"otp":"946449"},"message":"Incoming Request"}
+{"level":"info","timestamp":"Sun Apr 13 2025 02:40:37 GMT+0530 (India Standard Time)","request URL":"/api/users/signin","message":"Incoming Request"}
+{"level":"info","timestamp":"Sun Apr 13 2025 02:40:49 GMT+0530 (India Standard Time)","request URL":"/api/otp/reset-password","body":{"updatedPassword":"456"},"message":"Incoming Request"}
+{"level":"info","timestamp":"Sun Apr 13 2025 02:40:53 GMT+0530 (India Standard Time)","request URL":"/api/users/signin","message":"Incoming Request"}
+{"level":"error","timestamp":"Sun Apr 13 2025 02:40:53 GMT+0530 (India Standard Time)","request URL":"/api/users/signin","body":{"email":"ainishvadhwani2401@gmail.com","password":"123"},"message":"Error logging in"}
+{"level":"info","timestamp":"Sun Apr 13 2025 02:42:21 GMT+0530 (India Standard Time)","request URL":"/api/users/signin","message":"Incoming Request"}
+{"level":"error","timestamp":"Sun Apr 13 2025 02:42:21 GMT+0530 (India Standard Time)","request URL":"/api/users/signin","body":{"email":"ainishvadhwani2401@gmail.com","password":"123"},"message":"Error logging in Wrong Password"}

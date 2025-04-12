@@ -6,7 +6,7 @@ const getFriends=async(userId)=>{
         const friends=await friendshipModel.find({receiverId:userId, status:'ACCEPTED'})
         return friends
     } catch (error) {
-        
+        throw new errorHandler(400, `Error getting friends. ${error.message}`)
     }
 }
 
@@ -15,7 +15,7 @@ const getRequests=async(userId)=>{
         const requests=await friendshipModel.find({receiverId:userId, status:'PENDING'})
         return requests
     } catch (error) {
-        throw new errorHandler(400, "Error getting requests")
+        throw new errorHandler(400, `Error getting requests. ${error.message}`)
     }
 }
 
@@ -31,7 +31,7 @@ const toggleFriends=async(senderId,receiverId)=>{
         }
     } catch (error) {
         console.log(error)
-        throw new errorHandler(400, "Error toggling connection")
+        throw new errorHandler(400, `Error toggling connection. ${error.message}`)
     }
 }
 
@@ -51,7 +51,7 @@ const respondRequest=async(senderId,receiverId,updatedStatus)=>{
         }
     } catch (error) {
         console.log(error)
-        throw new errorHandler(400, "Error taking action")
+        throw new errorHandler(400, `Error taking action. ${error.message}`)
     }
 }
 

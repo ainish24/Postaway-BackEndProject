@@ -10,6 +10,7 @@ import postRoutes from './src/features/posts/post.routes.js'
 import commentRoutes from './src/features/comments/comment.routes.js'
 import likeRoutes from './src/features/likes/like.routes.js'
 import friendshipRoutes from './src/features/friendship/friendship.routes.js'
+import otpRoutes from './src/features/otp/otp.routes.js'
 
 const app = express()
 dotenv.config()
@@ -25,6 +26,7 @@ app.use('/api/posts',postRoutes)
 app.use('/api/comments',commentRoutes)
 app.use('/api/likes',likeRoutes)
 app.use('/api/friends',friendshipRoutes)
+app.use('/api/otp',otpRoutes)
 
 app.get('/',verifyToken,(req,res)=>{
     res.send("Server is up!")

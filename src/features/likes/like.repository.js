@@ -1,10 +1,22 @@
-// import { commentModel } from "../comments/comment.schema.js"
-// import { postModel } from "../posts/post.schema.js"
+import { commentModel } from "../comments/comment.schema.js"
+import { postModel } from "../posts/post.schema.js"
 import { likeModel } from "./like.schema.js"
 import { errorHandler } from "../../middlewares/errorHandler.js"
 
 const toggleLike = async (targetId, userId, likeFor) => {
     try {
+        if(likeFor=='Post'){
+            const post =await postModel.findById(targetId)
+            if(!post){
+                throw new errorHandler(400,"No post with given id exists.")
+            }
+        }
+        if(likeFor=='Comment'){
+            const comment =await commentModel.findById(targetId)
+            if(!comment){
+                throw new errorHandler(400,"No comment with given id exists.")
+            }
+        }
         const isExist = await likeModel.findOne({
             targetId,
             userId,
@@ -18,7 +30,7 @@ const toggleLike = async (targetId, userId, likeFor) => {
             return true
         }
     } catch (error) {
-        throw new errorHandler(400, 'Error toggling like')
+        throw new errorHandler(400, `Error toggling like. ${error.message}`)
     }
 }
 
@@ -27,10 +39,11 @@ const getLikes = async (likeFor, targetId) => {
         const likes = await likeModel.find({
             likeFor,
             targetId
-        })
+        }).populate({path:'userId',select:'-password -__v -logoutAll'}).populate({path:'targetId',select:'-__v -__id -userId -postId -user'})
         return likes
     } catch (error) {
-        throw new errorHandler(400, 'Error getting likes')
+        console.log(error)
+        throw new errorHandler(400, `Error getting likes. ${error.message}`)
     }
 }
 
