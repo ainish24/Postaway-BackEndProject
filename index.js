@@ -7,6 +7,7 @@ import { loggerMiddleware } from './src/middlewares/logger.js'
 import { verifyToken } from './src/middlewares/jwtAuth.js'
 import userRoutes from './src/features/users/user.routes.js'
 import postRoutes from './src/features/posts/post.routes.js'
+import commentRoutes from './src/features/comments/comment.routes.js'
 
 const app = express()
 dotenv.config()
@@ -19,6 +20,7 @@ app.use(express.static('public'))
 
 app.use('/api/users',userRoutes)
 app.use('/api/posts',postRoutes)
+app.use('/api/comments',commentRoutes)
 
 app.get('/',verifyToken,(req,res)=>{
     res.send("Server is up!")

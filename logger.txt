@@ -1,0 +1,42 @@
+{"level":"info","timestamp":"Sat Apr 12 2025 12:43:46 GMT+0530 (India Standard Time)","request URL":"/api/posts/all","message":"Incoming Request"}
+{"level":"error","timestamp":"Sat Apr 12 2025 12:43:46 GMT+0530 (India Standard Time)","request URL":"/api/posts/all","message":"Login Again"}
+{"level":"info","timestamp":"Sat Apr 12 2025 12:43:51 GMT+0530 (India Standard Time)","request URL":"/api/users/signin","message":"Incoming Request"}
+{"level":"info","timestamp":"Sat Apr 12 2025 12:43:58 GMT+0530 (India Standard Time)","request URL":"/api/users/get-all-details","message":"Incoming Request"}
+{"level":"info","timestamp":"Sat Apr 12 2025 12:45:09 GMT+0530 (India Standard Time)","request URL":"/api/posts","body":{"caption":"320 Kaju","imageUrl":"https://static.dilligrocery.com/121-large_default/cashews-w320.jpg"},"message":"Incoming Request"}
+{"level":"info","timestamp":"Sat Apr 12 2025 12:45:37 GMT+0530 (India Standard Time)","request URL":"/api/posts","body":{"caption":"Thailand Trip","imageUrl":"https://img.etimg.com/thumb/msid-120096061,width-480,height-360,imgsize-124840,resizemode-75/learn-a-few-thai-phrases.jpg"},"message":"Incoming Request"}
+{"level":"info","timestamp":"Sat Apr 12 2025 12:46:00 GMT+0530 (India Standard Time)","request URL":"/api/posts","body":{"caption":"Bali Trip","imageUrl":"https://media.digitalnomads.world/wp-content/uploads/2021/01/20120709/bali-for-digital-nomads.jpg"},"message":"Incoming Request"}
+{"level":"info","timestamp":"Sat Apr 12 2025 12:46:30 GMT+0530 (India Standard Time)","request URL":"/api/users/signin","message":"Incoming Request"}
+{"level":"info","timestamp":"Sat Apr 12 2025 12:46:58 GMT+0530 (India Standard Time)","request URL":"/api/posts","body":{"caption":"My new post","imageUrl":"https://png.pngtree.com/png-vector/20221222/ourmid/pngtree-new-post-stock-png-image_6533178.png"},"message":"Incoming Request"}
+{"level":"info","timestamp":"Sat Apr 12 2025 12:47:35 GMT+0530 (India Standard Time)","request URL":"/api/posts","body":{"caption":"Hallelujah","imageUrl":"https://i.swncdn.com/media/960w/cms/CW/holidays/62197-59541-sharon-mccutcheon-576867-unsplash.1200w.tn.jpg"},"message":"Incoming Request"}
+{"level":"info","timestamp":"Sat Apr 12 2025 12:49:01 GMT+0530 (India Standard Time)","request URL":"/api/comments/67fa138f44bde670ddc9159b","body":{"comment":"Jai jesus"},"message":"Incoming Request"}
+{"level":"info","timestamp":"Sat Apr 12 2025 12:50:01 GMT+0530 (India Standard Time)","request URL":"/api/comments/67fa138f44bde670ddc9159b","body":{"comment":"Jai jesus"},"message":"Incoming Request"}
+{"level":"error","timestamp":"Sat Apr 12 2025 12:50:01 GMT+0530 (India Standard Time)","request URL":"/api/comments/67fa138f44bde670ddc9159b","body":{"comment":"Jai jesus"},"message":"Error adding comment"}
+{"level":"info","timestamp":"Sat Apr 12 2025 12:50:30 GMT+0530 (India Standard Time)","request URL":"/api/comments/67fa138f44bde670ddc9159b","body":{"comment":"Jai jesus"},"message":"Incoming Request"}
+{"level":"error","timestamp":"Sat Apr 12 2025 12:50:30 GMT+0530 (India Standard Time)","request URL":"/api/comments/67fa138f44bde670ddc9159b","body":{"comment":"Jai jesus"},"message":"Error adding comment"}
+{"level":"info","timestamp":"Sat Apr 12 2025 12:50:55 GMT+0530 (India Standard Time)","request URL":"/api/comments/67fa138f44bde670ddc9159b","body":{"Comment":"Jai jesus"},"message":"Incoming Request"}
+{"level":"error","timestamp":"Sat Apr 12 2025 12:50:55 GMT+0530 (India Standard Time)","request URL":"/api/comments/67fa138f44bde670ddc9159b","body":{"Comment":"Jai jesus"},"message":"Error adding comment"}
+{"level":"info","timestamp":"Sat Apr 12 2025 12:51:40 GMT+0530 (India Standard Time)","request URL":"/api/comments/67fa138f44bde670ddc9159b","body":{"Comment":"Jai jesus"},"message":"Incoming Request"}
+{"level":"error","timestamp":"Sat Apr 12 2025 12:51:40 GMT+0530 (India Standard Time)","request URL":"/api/comments/67fa138f44bde670ddc9159b","body":{"Comment":"Jai jesus"},"message":"Error adding comment"}
+{"level":"info","timestamp":"Sat Apr 12 2025 12:52:43 GMT+0530 (India Standard Time)","request URL":"/api/comments/67fa138f44bde670ddc9159b","body":{"Comment":"Jai jesus"},"message":"Incoming Request"}
+{"level":"error","timestamp":"Sat Apr 12 2025 12:52:43 GMT+0530 (India Standard Time)","request URL":"/api/comments/67fa138f44bde670ddc9159b","body":{"Comment":"Jai jesus"},"message":"Error adding comment"}
+{"level":"info","timestamp":"Sat Apr 12 2025 12:53:40 GMT+0530 (India Standard Time)","request URL":"/api/comments/67fa138f44bde670ddc9159b","body":{"Comment":"Jai jesus"},"message":"Incoming Request"}
+{"level":"error","timestamp":"Sat Apr 12 2025 12:53:40 GMT+0530 (India Standard Time)","request URL":"/api/comments/67fa138f44bde670ddc9159b","body":{"Comment":"Jai jesus"},"message":"Error adding comment"}
+{"level":"info","timestamp":"Sat Apr 12 2025 12:53:58 GMT+0530 (India Standard Time)","request URL":"/api/comments/67fa138f44bde670ddc9159b","body":{"comment":"Jai jesus"},"message":"Incoming Request"}
+{"level":"info","timestamp":"Sat Apr 12 2025 12:54:12 GMT+0530 (India Standard Time)","request URL":"/api/users/signin","message":"Incoming Request"}
+{"level":"info","timestamp":"Sat Apr 12 2025 12:54:21 GMT+0530 (India Standard Time)","request URL":"/api/comments/67fa138f44bde670ddc9159b","body":{"comment":"Bhakti me shakti"},"message":"Incoming Request"}
+{"level":"info","timestamp":"Sat Apr 12 2025 12:54:42 GMT+0530 (India Standard Time)","request URL":"/api/comments/67fa138f44bde670ddc9159b","body":{"comment":"4 pins"},"message":"Incoming Request"}
+{"level":"info","timestamp":"Sat Apr 12 2025 12:54:58 GMT+0530 (India Standard Time)","request URL":"/api/comments/67fa138f44bde670ddc9159b","message":"Incoming Request"}
+{"level":"info","timestamp":"Sat Apr 12 2025 13:13:36 GMT+0530 (India Standard Time)","request URL":"/api/users/signin","message":"Incoming Request"}
+{"level":"info","timestamp":"Sat Apr 12 2025 13:13:46 GMT+0530 (India Standard Time)","request URL":"/api/comments/67fa153a81fc35b318265cc8","message":"Incoming Request"}
+{"level":"error","timestamp":"Sat Apr 12 2025 13:13:46 GMT+0530 (India Standard Time)","request URL":"/api/comments/67fa153a81fc35b318265cc8","message":"You are not authorized to perform this action"}
+{"level":"info","timestamp":"Sat Apr 12 2025 13:13:57 GMT+0530 (India Standard Time)","request URL":"/api/users/signin","message":"Incoming Request"}
+{"level":"info","timestamp":"Sat Apr 12 2025 13:14:03 GMT+0530 (India Standard Time)","request URL":"/api/comments/67fa153a81fc35b318265cc8","message":"Incoming Request"}
+{"level":"info","timestamp":"Sat Apr 12 2025 13:14:19 GMT+0530 (India Standard Time)","request URL":"/api/comments/67fa153a81fc35b318265cc8","message":"Incoming Request"}
+{"level":"info","timestamp":"Sat Apr 12 2025 13:16:46 GMT+0530 (India Standard Time)","request URL":"/api/users/signin","message":"Incoming Request"}
+{"level":"info","timestamp":"Sat Apr 12 2025 13:16:49 GMT+0530 (India Standard Time)","request URL":"/api/comments/67fa150e81fc35b318265cbf","body":{"comment":"Jai jisu"},"message":"Incoming Request"}
+{"level":"error","timestamp":"Sat Apr 12 2025 13:16:49 GMT+0530 (India Standard Time)","request URL":"/api/comments/67fa150e81fc35b318265cbf","body":{"comment":"Jai jisu"},"message":"You are not authorized to perform this action"}
+{"level":"info","timestamp":"Sat Apr 12 2025 13:16:56 GMT+0530 (India Standard Time)","request URL":"/api/users/signin","message":"Incoming Request"}
+{"level":"info","timestamp":"Sat Apr 12 2025 13:16:58 GMT+0530 (India Standard Time)","request URL":"/api/comments/67fa150e81fc35b318265cbf","body":{"comment":"Jai jisu"},"message":"Incoming Request"}
+{"level":"error","timestamp":"Sat Apr 12 2025 13:16:58 GMT+0530 (India Standard Time)","request URL":"/api/comments/67fa150e81fc35b318265cbf","body":{"comment":"Jai jisu"},"message":"You are not authorized to perform this action"}
+{"level":"info","timestamp":"Sat Apr 12 2025 13:17:06 GMT+0530 (India Standard Time)","request URL":"/api/users/signin","message":"Incoming Request"}
+{"level":"info","timestamp":"Sat Apr 12 2025 13:17:08 GMT+0530 (India Standard Time)","request URL":"/api/comments/67fa150e81fc35b318265cbf","body":{"comment":"Jai jisu"},"message":"Incoming Request"}
