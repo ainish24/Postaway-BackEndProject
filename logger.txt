@@ -184,3 +184,10 @@
 {"level":"error","timestamp":"Sun Apr 13 2025 02:40:53 GMT+0530 (India Standard Time)","request URL":"/api/users/signin","body":{"email":"ainishvadhwani2401@gmail.com","password":"123"},"message":"Error logging in"}
 {"level":"info","timestamp":"Sun Apr 13 2025 02:42:21 GMT+0530 (India Standard Time)","request URL":"/api/users/signin","message":"Incoming Request"}
 {"level":"error","timestamp":"Sun Apr 13 2025 02:42:21 GMT+0530 (India Standard Time)","request URL":"/api/users/signin","body":{"email":"ainishvadhwani2401@gmail.com","password":"123"},"message":"Error logging in Wrong Password"}
+{"level":"info","timestamp":"Sun Apr 13 2025 02:42:36 GMT+0530 (India Standard Time)","request URL":"/api/users/signin","message":"Incoming Request"}
+{"level":"error","timestamp":"Sun Apr 13 2025 02:42:36 GMT+0530 (India Standard Time)","request URL":"/api/users/signin","body":{"email":"ainishvadhwani2401@gmail.com","password":"123"},"message":"Error logging in. Wrong Password"}
+{"level":"info","timestamp":"Sun Apr 13 2025 02:42:44 GMT+0530 (India Standard Time)","request URL":"/api/users/signin","message":"Incoming Request"}
+{"level":"info","timestamp":"Sun Apr 13 2025 02:43:14 GMT+0530 (India Standard Time)","request URL":"/api/users/update-details/67f7cdb431fff56ed34dca89","body":{"email":"ainish@gmail.com"},"message":"Incoming Request"}
+{"level":"info","timestamp":"Sun Apr 13 2025 02:43:18 GMT+0530 (India Standard Time)","request URL":"/api/users/signin","message":"Incoming Request"}
+{"level":"error","timestamp":"Sun Apr 13 2025 02:43:18 GMT+0530 (India Standard Time)","request URL":"/api/users/signin","body":{"email":"ainishvadhwani2401@gmail.com","password":"456"},"message":"Error logging in. User with the given Email not found!"}
+{"level":"info","timestamp":"Sun Apr 13 2025 02:43:31 GMT+0530 (India Standard Time)","request URL":"/api/users/signin","message":"Incoming Request"}
