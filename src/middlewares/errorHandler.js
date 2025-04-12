@@ -26,7 +26,7 @@ export const errorHandlerMiddleware = (err, req, res, next) => {
   } else {
     console.log(err);
     if (
-      !(req.originalUrl == "/api/signin" || req.originalUrl == "/api/signup")
+      !(req.originalUrl == "/api/signin" || req.originalUrl == "/api/signup" || req.originalUrl == '/api/otp/reset-password')
     ) {
       logger.error("Oops! Somethimg went wrong...Try again later", {
         "request URL": req.originalUrl,
