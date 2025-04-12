@@ -60,3 +60,46 @@
 {"level":"info","timestamp":"Sat Apr 12 2025 17:17:07 GMT+0530 (India Standard Time)","request URL":"/api/likes/toggle/67fa150e81fc35b318265cbf?likeFor=Post","message":"Incoming Request"}
 {"level":"info","timestamp":"Sat Apr 12 2025 17:17:39 GMT+0530 (India Standard Time)","request URL":"/api/likes/67fa150e81fc35b318265cbf?likeFor=Comment","message":"Incoming Request"}
 {"level":"info","timestamp":"Sat Apr 12 2025 17:17:56 GMT+0530 (India Standard Time)","request URL":"/api/likes/67fa150e81fc35b318265cbf?likeFor=Post","message":"Incoming Request"}
+{"level":"info","timestamp":"Sat Apr 12 2025 20:35:30 GMT+0530 (India Standard Time)","request URL":"/api/users/signin","message":"Incoming Request"}
+{"level":"info","timestamp":"Sat Apr 12 2025 20:35:47 GMT+0530 (India Standard Time)","request URL":"/api/friends/toggle-friendship/67f8f2b5b2bac0a56bf36f7d","message":"Incoming Request"}
+{"level":"error","timestamp":"Sat Apr 12 2025 20:35:47 GMT+0530 (India Standard Time)","request URL":"/api/friends/toggle-friendship/67f8f2b5b2bac0a56bf36f7d","message":"Error toggling connection"}
+{"level":"info","timestamp":"Sat Apr 12 2025 20:36:06 GMT+0530 (India Standard Time)","request URL":"/api/friends/toggle-friendship/67f8f2b5b2bac0a56bf36f7d","message":"Incoming Request"}
+{"level":"error","timestamp":"Sat Apr 12 2025 20:36:06 GMT+0530 (India Standard Time)","request URL":"/api/friends/toggle-friendship/67f8f2b5b2bac0a56bf36f7d","message":"Error toggling connection"}
+{"level":"info","timestamp":"Sat Apr 12 2025 20:36:53 GMT+0530 (India Standard Time)","request URL":"/api/friends/toggle-friendship/67f8f2b5b2bac0a56bf36f7d","message":"Incoming Request"}
+{"level":"info","timestamp":"Sat Apr 12 2025 20:37:43 GMT+0530 (India Standard Time)","request URL":"/api/friends/toggle-friendship/67f8f2b5b2bac0a56bf36f7d","message":"Incoming Request"}
+{"level":"info","timestamp":"Sat Apr 12 2025 20:37:58 GMT+0530 (India Standard Time)","request URL":"/api/friends/toggle-friendship/67f8f2b5b2bac0a56bf36f7d","message":"Incoming Request"}
+{"level":"info","timestamp":"Sat Apr 12 2025 20:38:03 GMT+0530 (India Standard Time)","request URL":"/api/friends/toggle-friendship/67f8f2b5b2bac0a56bf36f7d","message":"Incoming Request"}
+{"level":"info","timestamp":"Sat Apr 12 2025 20:38:12 GMT+0530 (India Standard Time)","request URL":"/api/users/signin","message":"Incoming Request"}
+{"level":"info","timestamp":"Sat Apr 12 2025 20:38:16 GMT+0530 (India Standard Time)","request URL":"/api/friends/toggle-friendship/67f8f2b5b2bac0a56bf36f7d","message":"Incoming Request"}
+{"level":"info","timestamp":"Sat Apr 12 2025 20:38:20 GMT+0530 (India Standard Time)","request URL":"/api/friends/toggle-friendship/67f8f2b5b2bac0a56bf36f7d","message":"Incoming Request"}
+{"level":"info","timestamp":"Sat Apr 12 2025 20:38:24 GMT+0530 (India Standard Time)","request URL":"/api/friends/toggle-friendship/67f8f2b5b2bac0a56bf36f7d","message":"Incoming Request"}
+{"level":"info","timestamp":"Sat Apr 12 2025 20:38:42 GMT+0530 (India Standard Time)","request URL":"/api/friends/get-friends/67f8f2b5b2bac0a56bf36f7d","message":"Incoming Request"}
+{"level":"info","timestamp":"Sat Apr 12 2025 20:39:43 GMT+0530 (India Standard Time)","request URL":"/api/friends/get-friends/67f8f2b5b2bac0a56bf36f7d","message":"Incoming Request"}
+{"level":"info","timestamp":"Sat Apr 12 2025 20:39:55 GMT+0530 (India Standard Time)","request URL":"/api/friends/get-pending-requests","message":"Incoming Request"}
+{"level":"info","timestamp":"Sat Apr 12 2025 20:40:21 GMT+0530 (India Standard Time)","request URL":"/api/friends/get-pending-requests","message":"Incoming Request"}
+{"level":"info","timestamp":"Sat Apr 12 2025 20:40:32 GMT+0530 (India Standard Time)","request URL":"/api/users/logout","message":"Incoming Request"}
+{"level":"info","timestamp":"Sat Apr 12 2025 20:40:41 GMT+0530 (India Standard Time)","request URL":"/api/users/signin","message":"Incoming Request"}
+{"level":"info","timestamp":"Sat Apr 12 2025 20:40:44 GMT+0530 (India Standard Time)","request URL":"/api/friends/get-pending-requests","message":"Incoming Request"}
+{"level":"info","timestamp":"Sat Apr 12 2025 20:40:47 GMT+0530 (India Standard Time)","request URL":"/api/friends/get-pending-requests","message":"Incoming Request"}
+{"level":"info","timestamp":"Sat Apr 12 2025 20:41:17 GMT+0530 (India Standard Time)","request URL":"/api/friends/get-pending-requests","message":"Incoming Request"}
+{"level":"info","timestamp":"Sat Apr 12 2025 20:41:24 GMT+0530 (India Standard Time)","request URL":"/api/users/signin","message":"Incoming Request"}
+{"level":"info","timestamp":"Sat Apr 12 2025 20:41:29 GMT+0530 (India Standard Time)","request URL":"/api/friends/get-pending-requests","message":"Incoming Request"}
+{"level":"info","timestamp":"Sat Apr 12 2025 20:41:55 GMT+0530 (India Standard Time)","request URL":"/api/friends/get-pending-requests","message":"Incoming Request"}
+{"level":"info","timestamp":"Sat Apr 12 2025 20:42:30 GMT+0530 (India Standard Time)","request URL":"/api/friends/get-pending-requests","message":"Incoming Request"}
+{"level":"info","timestamp":"Sat Apr 12 2025 20:43:38 GMT+0530 (India Standard Time)","request URL":"/api/friends/response-to-request/67f8b9c761f645fc4709ba34","body":{"status":"ia"},"message":"Incoming Request"}
+{"level":"error","timestamp":"Sat Apr 12 2025 20:43:38 GMT+0530 (India Standard Time)","request URL":"/api/friends/response-to-request/67f8b9c761f645fc4709ba34","body":{"status":"ia"},"message":"Invalid status"}
+{"level":"info","timestamp":"Sat Apr 12 2025 20:43:44 GMT+0530 (India Standard Time)","request URL":"/api/friends/response-to-request/67f8b9c761f645fc4709ba34","body":{"status":"APPROVED"},"message":"Incoming Request"}
+{"level":"error","timestamp":"Sat Apr 12 2025 20:43:44 GMT+0530 (India Standard Time)","request URL":"/api/friends/response-to-request/67f8b9c761f645fc4709ba34","body":{"status":"APPROVED"},"message":"Invalid status"}
+{"level":"info","timestamp":"Sat Apr 12 2025 20:43:51 GMT+0530 (India Standard Time)","request URL":"/api/friends/response-to-request/67f8b9c761f645fc4709ba34","body":{"status":"ACCEPTED"},"message":"Incoming Request"}
+{"level":"error","timestamp":"Sat Apr 12 2025 20:43:51 GMT+0530 (India Standard Time)","request URL":"/api/friends/response-to-request/67f8b9c761f645fc4709ba34","body":{"status":"ACCEPTED"},"message":"Invalid status"}
+{"level":"info","timestamp":"Sat Apr 12 2025 20:44:24 GMT+0530 (India Standard Time)","request URL":"/api/friends/response-to-request/67f8b9c761f645fc4709ba34","body":{"status":"ACCEPTED"},"message":"Incoming Request"}
+{"level":"error","timestamp":"Sat Apr 12 2025 20:44:24 GMT+0530 (India Standard Time)","request URL":"/api/friends/response-to-request/67f8b9c761f645fc4709ba34","body":{"status":"ACCEPTED"},"message":"Error taking action"}
+{"level":"info","timestamp":"Sat Apr 12 2025 20:44:44 GMT+0530 (India Standard Time)","request URL":"/api/friends/response-to-request/67f8b9c761f645fc4709ba34","body":{"status":"ACCEPTED"},"message":"Incoming Request"}
+{"level":"error","timestamp":"Sat Apr 12 2025 20:44:45 GMT+0530 (India Standard Time)","request URL":"/api/friends/response-to-request/67f8b9c761f645fc4709ba34","body":{"status":"ACCEPTED"},"message":"Error taking action"}
+{"level":"info","timestamp":"Sat Apr 12 2025 20:44:55 GMT+0530 (India Standard Time)","request URL":"/api/friends/response-to-request/67f8b9c761f645fc4709ba34","body":{"status":"ACCEPTED"},"message":"Incoming Request"}
+{"level":"error","timestamp":"Sat Apr 12 2025 20:44:55 GMT+0530 (India Standard Time)","request URL":"/api/friends/response-to-request/67f8b9c761f645fc4709ba34","body":{"status":"ACCEPTED"},"message":"Error taking action"}
+{"level":"info","timestamp":"Sat Apr 12 2025 20:46:32 GMT+0530 (India Standard Time)","request URL":"/api/friends/response-to-request/67f8b9c761f645fc4709ba34","body":{"status":"ACCEPTED"},"message":"Incoming Request"}
+{"level":"error","timestamp":"Sat Apr 12 2025 20:46:32 GMT+0530 (India Standard Time)","request URL":"/api/friends/response-to-request/67f8b9c761f645fc4709ba34","body":{"status":"ACCEPTED"},"message":"Error taking action"}
+{"level":"info","timestamp":"Sat Apr 12 2025 20:47:39 GMT+0530 (India Standard Time)","request URL":"/api/friends/response-to-request/67f8b9c761f645fc4709ba34","body":{"status":"ACCEPTED"},"message":"Incoming Request"}
+{"level":"info","timestamp":"Sat Apr 12 2025 20:47:46 GMT+0530 (India Standard Time)","request URL":"/api/friends/get-friends/67f8f2b5b2bac0a56bf36f7d","message":"Incoming Request"}
+{"level":"info","timestamp":"Sat Apr 12 2025 20:48:06 GMT+0530 (India Standard Time)","request URL":"/api/friends/get-friends/67f8f2b5b2bac0a56bf36f7d","message":"Incoming Request"}
