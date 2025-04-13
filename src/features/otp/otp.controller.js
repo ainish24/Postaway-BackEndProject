@@ -21,13 +21,15 @@ const sendOtp = async (req, res) => {
 }
 
 const verifyOtp=async (req,res)=>{
-    const userId = req.user._id
+try{    const userId = req.user._id
     const {otp}=req.body
     await otpRepository.verifyOtp(otp,userId)
     res.status(200).json({
         success:true,
         message:'OTP verification successful.'
-    })
+    })}catch(error){
+        throw new errorHandler(400, error.message)
+    }
 }
 
 const resetPassword=async (req,res)=>{

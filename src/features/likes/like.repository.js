@@ -36,6 +36,18 @@ const toggleLike = async (targetId, userId, likeFor) => {
 
 const getLikes = async (likeFor, targetId) => {
     try {
+        if(likeFor=='Comment'){
+            const comment=await commentModel.findById(targetId)
+            if(!comment){
+                throw new errorHandler(404,'Comment not found')
+            }
+        }
+        if(likeFor=='Post'){
+            const post=await postModel.findById(targetId)
+            if(!post){
+                throw new errorHandler(404,'Post not found')
+            }
+        }
         const likes = await likeModel.find({
             likeFor,
             targetId

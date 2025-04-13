@@ -1,0 +1,1069 @@
+{
+    "swagger": "2.0",
+    "info": {
+        "version": "1.0.0",
+        "title": "Postaway: Users API",
+        "description": "API for managing users, their signup/login, post comments and likes related operations, friendship status and OTP based verification."
+    },
+    "host": "localhost:3000",
+    "basePath": "/",
+    "schemes": [
+        "http"
+    ],
+    "securityDefinitions": {
+        "BearerAuth": {
+            "type": "apiKey",
+            "name": "Authorization",
+            "in": "header",
+            "description": "Provide the JWT token as a Bearer token."
+        }
+    },
+    "security": [
+        {
+            "BearerAuth": []
+        }
+    ],
+    "tags": [
+        {
+            "name": "General",
+            "description": "General API endpoints like landing page"
+        },
+        {
+            "name": "Users",
+            "description": "All the endpoints related to user at base level like signin and signup"
+        },
+        {
+            "name": "Posts",
+            "description": "All the endpoints related to posts."
+        },
+        {
+            "name": "Comments",
+            "description": "All the endpoints related to comments."
+        },
+        {
+            "name": "Likes",
+            "description": "All the endpoints related to likes."
+        },
+        {
+            "name": "OTP",
+            "description": "All the endpoints related to OTP."
+        },
+        {
+            "name": "Friendship",
+            "description": "All the endpoints related to friendship."
+        }
+    ],
+    "paths": {
+        "/": {
+            "get": {
+                "tags": ["General"],
+                "summary": "Landing Page",
+                "description": "Base endpoint to check server status. Requires authentication.",
+                "responses": {
+                    "200": {
+                        "description": "Server is up and running.",
+                        "schema": {
+                            "$ref": "#/definitions/SuccessMessage"
+                        }
+                    },
+                    "401": {
+                        "description": "Unauthorized access. Token verification failed.",
+                        "schema": {
+                            "$ref": "#/definitions/ErrorResponse"
+                        }
+                    }
+                }
+            }
+        },
+        "/api/docs": {
+            "get": {
+                "tags": ["General"],
+                "summary": "API Documentation",
+                "description": "Access the Swagger-generated API documentation.",
+                "responses": {
+                    "200": {
+                        "description": "Swagger UI served successfully."
+                    }
+                }
+            }
+        },
+        "/users/signup": {
+            "post": {
+                "tags": [
+                    "Users"
+                ],
+                "summary": "User Signup",
+                "description": "Register a new user by providing required details and an avatar file.",
+                "consumes": [
+                    "multipart/form-data"
+                ],
+                "parameters": [
+                    {
+                        "name": "avatar",
+                        "in": "formData",
+                        "type": "file",
+                        "description": "Profile picture for the user."
+                    },
+                    {
+                        "name": "name",
+                        "in": "formData",
+                        "type": "string",
+                        "required": true,
+                        "description": "Name of the user."
+                    },
+                    {
+                        "name": "email",
+                        "in": "formData",
+                        "type": "string",
+                        "required": true,
+                        "description": "Email of the user."
+                    },
+                    {
+                        "name": "password",
+                        "in": "formData",
+                        "type": "string",
+                        "required": true,
+                        "description": "Password for the user account."
+                    },
+                    {
+                        "name": "gender",
+                        "in": "formData",
+                        "type": "string",
+                        "required": true,
+                        "enum": [
+                            "Male",
+                            "Female",
+                            "Others"
+                        ],
+                        "description": "Gender of the user."
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "User signed up successfully.",
+                        "schema": {
+                            "$ref": "#/definitions/SuccessMessage"
+                        }
+                    },
+                    "400": {
+                        "description": "Error creating new user.",
+                        "schema": {
+                            "$ref": "#/definitions/ErrorResponse"
+                        }
+                    }
+                }
+            }
+        },
+        "/users/signin": {
+            "post": {
+                "tags": [
+                    "Users"
+                ],
+                "summary": "User Signin",
+                "description": "Authenticate user with email and password.",
+                "parameters": [
+                    {
+                        "name": "body",
+                        "in": "body",
+                        "required": true,
+                        "schema": {
+                            "type": "object",
+                            "properties": {
+                                "email": {
+                                    "type": "string",
+                                    "description": "Email of the user."
+                                },
+                                "password": {
+                                    "type": "string",
+                                    "description": "Password of the user."
+                                }
+                            },
+                            "required": [
+                                "email",
+                                "password"
+                            ]
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "User signed in successfully.",
+                        "schema": {
+                            "$ref": "#/definitions/SuccessMessage"
+                        }
+                    },
+                    "400": {
+                        "description": "Error logging in user.",
+                        "schema": {
+                            "$ref": "#/definitions/ErrorResponse"
+                        }
+                    }
+                }
+            }
+        },
+        "/users/logout": {
+            "post": {
+                "tags": [
+                    "Users"
+                ],
+                "summary": "User Logout",
+                "description": "Log out the currently signed-in user.",
+                "responses": {
+                    "200": {
+                        "description": "User logged out successfully.",
+                        "schema": {
+                            "$ref": "#/definitions/SuccessMessage"
+                        }
+                    }
+                }
+            }
+        },
+        "/users/get-details/{userId}": {
+            "get": {
+                "tags": [
+                    "Users"
+                ],
+                "summary": "Get User Details",
+                "description": "Retrieve details of a specific user by their ID.",
+                "parameters": [
+                    {
+                        "name": "userId",
+                        "in": "path",
+                        "type": "string",
+                        "required": true,
+                        "description": "Unique identifier of the user."
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "User details retrieved successfully.",
+                        "schema": {
+                            "$ref": "#/definitions/UserDetails"
+                        }
+                    },
+                    "404": {
+                        "description": "User not found.",
+                        "schema": {
+                            "$ref": "#/definitions/ErrorResponse"
+                        }
+                    }
+                }
+            }
+        },
+        "/comments/{postId}": {
+            "get": {
+                "tags": [
+                    "Comments"
+                ],
+                "summary": "Get comments",
+                "description": "Retrieve all comments for a specific post. Requires authentication.",
+                "parameters": [
+                    {
+                        "name": "postId",
+                        "in": "path",
+                        "required": true,
+                        "type": "string",
+                        "description": "ID of the post"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Successful response with comments",
+                        "schema": {
+                            "$ref": "#/definitions/Comment"
+                        }
+                    },
+                    "400": {
+                        "description": "Error occurred when retrieving comments",
+                        "schema": {
+                            "$ref": "#/definitions/ErrorResponse"
+                        }
+                    }
+                }
+            },
+            "post": {
+                "tags": [
+                    "Comments"
+                ],
+                "summary": "Add a comment",
+                "description": "Add a new comment to a post. Requires authentication.",
+                "parameters": [
+                    {
+                        "name": "postId",
+                        "in": "path",
+                        "required": true,
+                        "type": "string",
+                        "description": "ID of the post"
+                    },
+                    {
+                        "name": "body",
+                        "in": "body",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/CreateComment"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Comment added successfully",
+                        "schema": {
+                            "$ref": "#/definitions/Comment"
+                        }
+                    },
+                    "400": {
+                        "description": "Error occurred when adding a comment",
+                        "schema": {
+                            "$ref": "#/definitions/ErrorResponse"
+                        }
+                    }
+                }
+            }
+        },
+        "/comments/{commentId}": {
+            "delete": {
+                "tags": [
+                    "Comments"
+                ],
+                "summary": "Delete a comment",
+                "description": "Remove a specific comment. Requires authentication and editor permissions.",
+                "parameters": [
+                    {
+                        "name": "commentId",
+                        "in": "path",
+                        "required": true,
+                        "type": "string",
+                        "description": "ID of the comment"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Comment deleted successfully",
+                        "schema": {
+                            "$ref": "#/definitions/ErrorResponse"
+                        }
+                    },
+                    "400": {
+                        "description": "Error occurred when deleting the comment",
+                        "schema": {
+                            "$ref": "#/definitions/ErrorResponse"
+                        }
+                    }
+                }
+            },
+            "patch": {
+                "tags": [
+                    "Comments"
+                ],
+                "summary": "Update a comment",
+                "description": "Edit the content of a comment. Requires authentication and editor permissions.",
+                "parameters": [
+                    {
+                        "name": "commentId",
+                        "in": "path",
+                        "required": true,
+                        "type": "string",
+                        "description": "ID of the comment"
+                    },
+                    {
+                        "name": "body",
+                        "in": "body",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/CreateComment"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Comment updated successfully",
+                        "schema": {
+                            "$ref": "#/definitions/Comment"
+                        }
+                    },
+                    "400": {
+                        "description": "Error occurred when updating the comment",
+                        "schema": {
+                            "$ref": "#/definitions/ErrorResponse"
+                        }
+                    }
+                }
+            }
+        },
+        "/posts/all": {
+            "get": {
+                "tags": [
+                    "Posts"
+                ],
+                "summary": "Retrieve all posts",
+                "description": "Fetch all posts available in the system. Requires authentication.",
+                "responses": {
+                    "200": {
+                        "description": "List of all posts",
+                        "schema": {
+                            "type": "array",
+                            "items": {
+                                "$ref": "#/definitions/Post"
+                            }
+                        }
+                    },
+                    "400": {
+                        "description": "Error fetching posts",
+                        "schema": {
+                            "$ref": "#/definitions/ErrorResponse"
+                        }
+                    }
+                }
+            }
+        },
+        "/posts/{postId}": {
+            "get": {
+                "tags": [
+                    "Posts"
+                ],
+                "summary": "Get post by ID",
+                "description": "Retrieve details of a post using its ID. Requires authentication.",
+                "parameters": [
+                    {
+                        "name": "postId",
+                        "in": "path",
+                        "required": true,
+                        "type": "string",
+                        "description": "ID of the post to retrieve."
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Post details retrieved successfully",
+                        "schema": {
+                            "$ref": "#/definitions/Post"
+                        }
+                    },
+                    "400": {
+                        "description": "Post not found",
+                        "schema": {
+                            "$ref": "#/definitions/ErrorResponse"
+                        }
+                    }
+                }
+            },
+            "delete": {
+                "tags": [
+                    "Posts"
+                ],
+                "summary": "Delete post by ID",
+                "description": "Delete a specific post by its ID. Requires authentication and ownership validation.",
+                "parameters": [
+                    {
+                        "name": "postId",
+                        "in": "path",
+                        "required": true,
+                        "type": "string",
+                        "description": "ID of the post to delete."
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Post deleted successfully",
+                        "schema": {
+                            "$ref": "#/definitions/SuccessMessage"
+                        }
+                    },
+                    "400": {
+                        "description": "Error deleting post",
+                        "schema": {
+                            "$ref": "#/definitions/ErrorResponse"
+                        }
+                    }
+                }
+            },
+            "patch": {
+                "tags": [
+                    "Posts"
+                ],
+                "summary": "Update post by ID",
+                "description": "Update details of a specific post by its ID. Requires authentication and ownership validation.",
+                "parameters": [
+                    {
+                        "name": "postId",
+                        "in": "path",
+                        "required": true,
+                        "type": "string",
+                        "description": "ID of the post to update."
+                    },
+                    {
+                        "name": "body",
+                        "in": "body",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/PostUpdate"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Post updated successfully",
+                        "schema": {
+                            "$ref": "#/definitions/Post"
+                        }
+                    },
+                    "400": {
+                        "description": "Error updating post",
+                        "schema": {
+                            "$ref": "#/definitions/ErrorResponse"
+                        }
+                    }
+                }
+            }
+        },
+        "/posts": {
+            "get": {
+                "tags": [
+                    "Posts"
+                ],
+                "summary": "Get posts by user",
+                "description": "Retrieve all posts created by the authenticated user.",
+                "responses": {
+                    "200": {
+                        "description": "List of user's posts",
+                        "schema": {
+                            "type": "array",
+                            "items": {
+                                "$ref": "#/definitions/Post"
+                            }
+                        }
+                    },
+                    "400": {
+                        "description": "Error fetching posts",
+                        "schema": {
+                            "$ref": "#/definitions/ErrorResponse"
+                        }
+                    }
+                }
+            },
+            "post": {
+                "tags": [
+                    "Posts"
+                ],
+                "summary": "Create a new post",
+                "description": "Add a new post with a caption and image URL. Requires authentication.",
+                "parameters": [
+                    {
+                        "name": "body",
+                        "in": "body",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/PostCreate"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Post created successfully",
+                        "schema": {
+                            "$ref": "#/definitions/Post"
+                        }
+                    },
+                    "500": {
+                        "description": "Error creating post",
+                        "schema": {
+                            "$ref": "#/definitions/ErrorResponse"
+                        }
+                    }
+                }
+            }
+        },
+        "/likes/{id}": {
+            "get": {
+                "tags": ["Likes"],
+                "summary": "Get likes for a target",
+                "description": "Retrieve all likes for a specified post or comment. Requires authentication.",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "required": true,
+                        "type": "string",
+                        "description": "ID of the post or comment."
+                    },
+                    {
+                        "name": "likeFor",
+                        "in": "query",
+                        "required": true,
+                        "type": "string",
+                        "enum": ["Post", "Comment"],
+                        "description": "Specify whether the target is a post or comment."
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "List of likes retrieved successfully.",
+                        "schema": {
+                            "type": "array",
+                            "items": {
+                                "$ref": "#/definitions/Like"
+                            }
+                        }
+                    },
+                    "400": {
+                        "description": "Error retrieving likes.",
+                        "schema": {
+                            "$ref": "#/definitions/ErrorResponse"
+                        }
+                    }
+                }
+            }
+        },
+        "/likes/toggle/{id}": {
+            "post": {
+                "tags": ["Likes"],
+                "summary": "Toggle like for a target",
+                "description": "Add or remove a like for a specified post or comment. Requires authentication.",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "required": true,
+                        "type": "string",
+                        "description": "ID of the post or comment."
+                    },
+                    {
+                        "name": "likeFor",
+                        "in": "query",
+                        "required": true,
+                        "type": "string",
+                        "enum": ["Post", "Comment"],
+                        "description": "Specify whether the target is a post or comment."
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Like toggled successfully.",
+                        "schema": {
+                            "$ref": "#/definitions/SuccessMessage"
+                        }
+                    },
+                    "400": {
+                        "description": "Error toggling like.",
+                        "schema": {
+                            "$ref": "#/definitions/ErrorResponse"
+                        }
+                    }
+                }
+            }
+        },
+        "/friends/get-friends/{userId}": {
+            "get": {
+                "tags": ["Friendship"],
+                "summary": "Retrieve friends",
+                "description": "Get a list of all friends for a specific user. Requires authentication.",
+                "parameters": [
+                    {
+                        "name": "userId",
+                        "in": "path",
+                        "type": "string",
+                        "required": true,
+                        "description": "ID of the user whose friends are to be retrieved."
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "List of friends retrieved successfully.",
+                        "schema": {
+                            "type": "array",
+                            "items": {
+                                "$ref": "#/definitions/Friendship"
+                            }
+                        }
+                    },
+                    "400": {
+                        "description": "Error retrieving friends.",
+                        "schema": {
+                            "$ref": "#/definitions/ErrorResponse"
+                        }
+                    }
+                }
+            }
+        },
+        "/friends/get-pending-requests": {
+            "get": {
+                "tags": ["Friendship"],
+                "summary": "Get pending friendship requests",
+                "description": "Retrieve all pending friendship requests for the authenticated user.",
+                "responses": {
+                    "200": {
+                        "description": "List of pending requests retrieved successfully.",
+                        "schema": {
+                            "type": "array",
+                            "items": {
+                                "$ref": "#/definitions/Friendship"
+                            }
+                        }
+                    },
+                    "400": {
+                        "description": "Error retrieving requests.",
+                        "schema": {
+                            "$ref": "#/definitions/ErrorResponse"
+                        }
+                    }
+                }
+            }
+        },
+        "/friends/toggle-friendship/{friendId}": {
+            "post": {
+                "tags": ["Friendship"],
+                "summary": "Toggle friendship request",
+                "description": "Send or delete a friendship request for a specific user. Requires authentication.",
+                "parameters": [
+                    {
+                        "name": "friendId",
+                        "in": "path",
+                        "type": "string",
+                        "required": true,
+                        "description": "ID of the user to send or delete the request."
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Friendship request toggled successfully.",
+                        "schema": {
+                            "$ref": "#/definitions/SuccessMessage"
+                        }
+                    },
+                    "400": {
+                        "description": "Error toggling friendship request.",
+                        "schema": {
+                            "$ref": "#/definitions/ErrorResponse"
+                        }
+                    }
+                }
+            }
+        },
+        "/friends/response-to-request/{friendId}": {
+            "post": {
+                "tags": ["Friendship"],
+                "summary": "Respond to friendship request",
+                "description": "Approve or reject a friendship request. Requires authentication.",
+                "parameters": [
+                    {
+                        "name": "friendId",
+                        "in": "path",
+                        "type": "string",
+                        "required": true,
+                        "description": "ID of the user whose request is to be responded to."
+                    },
+                    {
+                        "name": "body",
+                        "in": "body",
+                        "required": true,
+                        "schema": {
+                            "type": "object",
+                            "properties": {
+                                "status": {
+                                    "type": "string",
+                                    "enum": ["PENDING", "ACCEPTED", "REJECTED"],
+                                    "description": "Status of the friendship request."
+                                }
+                            },
+                            "required": ["status"]
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Request response sent successfully.",
+                        "schema": {
+                            "$ref": "#/definitions/SuccessMessage"
+                        }
+                    },
+                    "400": {
+                        "description": "Error responding to request.",
+                        "schema": {
+                            "$ref": "#/definitions/ErrorResponse"
+                        }
+                    }
+                }
+            }
+        },
+        "/otp/send": {
+            "post": {
+                "tags": ["OTP"],
+                "summary": "Send OTP",
+                "description": "Generate and send an OTP to the authenticated user's email address. OTP is valid for 5 minutes.",
+                "responses": {
+                    "200": {
+                        "description": "OTP sent successfully.",
+                        "schema": {
+                            "$ref": "#/definitions/SuccessMessage"
+                        }
+                    },
+                    "400": {
+                        "description": "Error sending OTP.",
+                        "schema": {
+                            "$ref": "#/definitions/ErrorResponse"
+                        }
+                    }
+                }
+            }
+        },
+        "/otp/verify": {
+            "post": {
+                "tags": ["OTP"],
+                "summary": "Verify OTP",
+                "description": "Verify the OTP sent to the user's email address. Requires authentication.",
+                "parameters": [
+                    {
+                        "name": "body",
+                        "in": "body",
+                        "required": true,
+                        "schema": {
+                            "type": "object",
+                            "properties": {
+                                "otp": {
+                                    "type": "number",
+                                    "description": "The OTP to verify."
+                                }
+                            },
+                            "required": ["otp"]
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OTP verification successful.",
+                        "schema": {
+                            "$ref": "#/definitions/SuccessMessage"
+                        }
+                    },
+                    "400": {
+                        "description": "OTP verification failed.",
+                        "schema": {
+                            "$ref": "#/definitions/ErrorResponse"
+                        }
+                    }
+                }
+            }
+        },
+        "/otp/reset-password": {
+            "post": {
+                "tags": ["OTP"],
+                "summary": "Reset Password",
+                "description": "Reset the password for the authenticated user after OTP verification.",
+                "parameters": [
+                    {
+                        "name": "body",
+                        "in": "body",
+                        "required": true,
+                        "schema": {
+                            "type": "object",
+                            "properties": {
+                                "updatedPassword": {
+                                    "type": "string",
+                                    "description": "The new password to set."
+                                }
+                            },
+                            "required": ["updatedPassword"]
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Password reset successfully.",
+                        "schema": {
+                            "$ref": "#/definitions/SuccessMessage"
+                        }
+                    },
+                    "400": {
+                        "description": "Error resetting password.",
+                        "schema": {
+                            "$ref": "#/definitions/ErrorResponse"
+                        }
+                    }
+                }
+            }
+        }
+    },
+    "definitions": {
+        "UserDetails": {
+            "type": "object",
+            "properties": {
+                "name": {
+                    "type": "string",
+                    "description": "Name of the user."
+                },
+                "email": {
+                    "type": "string",
+                    "description": "Email of the user."
+                },
+                "avatar": {
+                    "type": "string",
+                    "description": "Profile picture of the user."
+                },
+                "gender": {
+                    "type": "string",
+                    "description": "Gender of the user."
+                }
+            }
+        },
+        "Post": {
+            "type": "object",
+            "properties": {
+                "id": {
+                    "type": "string",
+                    "description": "Unique identifier for the post."
+                },
+                "caption": {
+                    "type": "string",
+                    "description": "Caption for the post."
+                },
+                "imageUrl": {
+                    "type": "string",
+                    "description": "URL of the image associated with the post."
+                },
+                "user": {
+                    "type": "string",
+                    "description": "ID of the user who created the post."
+                }
+            },
+            "required": [
+                "caption",
+                "imageUrl",
+                "user"
+            ]
+        },
+        "PostCreate": {
+            "type": "object",
+            "properties": {
+                "caption": {
+                    "type": "string",
+                    "description": "Caption for the new post."
+                },
+                "imageUrl": {
+                    "type": "string",
+                    "description": "URL of the image for the new post."
+                }
+            },
+            "required": [
+                "caption",
+                "imageUrl"
+            ]
+        },
+        "PostUpdate": {
+            "type": "object",
+            "properties": {
+                "caption": {
+                    "type": "string",
+                    "description": "Updated caption for the post."
+                },
+                "imageUrl": {
+                    "type": "string",
+                    "description": "Updated URL of the image for the post."
+                }
+            }
+        },
+        "SuccessMessage": {
+            "type": "object",
+            "properties": {
+                "success": {
+                    "type": "boolean",
+                    "example": true
+                },
+                "message": {
+                    "type": "string",
+                    "example": "Operation completed successfully."
+                }
+            }
+        },
+        "Comment": {
+            "type": "object",
+            "properties": {
+                "_id": {
+                    "type": "string",
+                    "description": "Unique identifier for the comment"
+                },
+                "comment": {
+                    "type": "string",
+                    "description": "The actual text content of the comment",
+                    "example": "This is a sample comment."
+                },
+                "userId": {
+                    "type": "string",
+                    "description": "The ID of the user who posted the comment"
+                },
+                "postId": {
+                    "type": "string",
+                    "description": "The ID of the post the comment is associated with"
+                }
+            },
+            "required": [
+                "comment",
+                "userId",
+                "postId"
+            ]
+        },
+        "ErrorResponse": {
+            "type": "object",
+            "properties": {
+                "status": {
+                    "type": "number",
+                    "description": "HTTP status code"
+                },
+                "message": {
+                    "type": "string",
+                    "description": "Error message describing the issue"
+                }
+            }
+        },
+        "CreateComment": {
+            "type": "object",
+            "properties": {
+                "comment": {
+                    "type": "string",
+                    "description": "The text of the comment",
+                    "example": "This is a new comment."
+                }
+            },
+            "required": [
+                "comment"
+            ]
+        },
+        "Like": {
+            "type": "object",
+            "properties": {
+                "likeFor": {
+                    "type": "string",
+                    "enum": ["Post", "Comment"],
+                    "description": "Specifies whether the like is for a post or comment."
+                },
+                "userId": {
+                    "type": "string",
+                    "description": "ID of the user who liked the target."
+                },
+                "targetId": {
+                    "type": "string",
+                    "description": "ID of the target (post or comment) that is liked."
+                }
+            },
+            "required": ["likeFor", "userId", "targetId"]
+        },
+        "Friendship": {
+            "type": "object",
+            "properties": {
+                "senderId": {
+                    "type": "string",
+                    "description": "ID of the user who sent the friendship request."
+                },
+                "receiverId": {
+                    "type": "string",
+                    "description": "ID of the user who received the friendship request."
+                },
+                "status": {
+                    "type": "string",
+                    "enum": ["PENDING", "ACCEPTED", "REJECTED"],
+                    "description": "Current status of the friendship request."
+                }
+            },
+            "required": ["senderId", "receiverId", "status"]
+        }
+    }
+}

@@ -34,6 +34,9 @@ const getRequests=async(req,res)=>{
 const toggleFriends=async(req,res)=>{
     const senderId=req.user._id
     const receiverId=req.params.friendId
+    if(senderId==receiverId){
+        throw new errorHandler(400,"Cannot send friend request to yourself")
+    }
     const friends=await friendshipRepository.toggleFriends(senderId,receiverId)
     if(friends){
         res.status(200).json({
