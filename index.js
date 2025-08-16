@@ -95,6 +95,50 @@ app.post('/getUserDetails', async (req, res) => {
     }
 })
 
+//Practice route
+app.post('/practice1',async (req,res)=>{
+    try {
+        const {userId} = req.body
+        const foundUser = await userModel.findById(userId)
+        const postsData=await postModel.aggregate([
+            {$match:{user:foundUser._id}},
+            {$lookup:{
+                from:"likes",
+                localField:"_id",
+                foreignField:"targetId",
+                as:"likesData"
+            }},
+            {$addFields:{likes:"$likesData._id"}},
+            {$project:{likesData:0}},
+            {$lookup:{
+                from:"comments",
+                localField:"_id",
+                foreignField:"postId",
+                as:"commentsData"
+            }},
+            {$addFields:{comments:"$commentsData._id"}},
+            {$project:{commentsData:0}},
+            {$project:{userId:"$user",likes:1,comments:1}},
+            {$addFields:{likesLength:{$size:"$likes"}}},
+            {$sort:{likesLength:1}},
+            {$project:{likesLength:0}}
+        ])
+        const userData={
+            user:foundUser
+        }
+        res.status(200).json({
+            status:200,
+            data:postsData
+        })
+    } catch (error) {
+        console.log(error)
+        res.status(500).json({
+            status:"Error",
+            message:"Internal Server Error"
+        })
+    }
+})
+
 app.use((req, res, next) => {
     throw new errorHandler(404, "Page does not exist!")
 });
